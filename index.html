@@ -1,1 +1,358 @@
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#153d35">
+<meta name="description" content="CIT Technician Portal ระบบเอกสารและงานบริการสำหรับช่าง">
+<title>CIT Technician | CIT</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #153d35;
+  --green-light: #24745e;
+  --bg: #f1f5f3;
+  --text: #20352e;
+  --muted: #82918a;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(135deg,#102f29,#246b55);
+  color: white;
+  padding: 35px 22px 55px;
+  border-radius: 0 0 30px 30px;
+}
+
+.topline {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff55;
+  border-radius: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.brand-name {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.brand-sub {
+  font-size: 10px;
+  opacity: .7;
+  margin-top: 4px;
+}
+
+.status {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  border: 1px solid #ffffff55;
+  padding: 8px 12px;
+  border-radius: 30px;
+}
+
+.status i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #72e0a7;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.hero-copy {
+  max-width: 950px;
+  margin: 48px auto 0;
+}
+
+.eyebrow {
+  color: #a8d6c3;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: clamp(27px,5vw,40px);
+  margin: 12px 0;
+}
+
+.hero-copy p:last-child {
+  color: #d1e5dc;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 950px;
+  margin: -20px auto 0;
+  padding: 0 20px;
+  position: relative;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.section-kicker {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--green-light);
+  font-weight: bold;
+}
+
+.welcome h2 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 25px 22px;
+  border-radius: 19px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 5px 22px #173d3010;
+  border: 1px solid #e7eee9;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #173d3020;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.icon-green { background:#e4f3eb; }
+.icon-blue { background:#e6effa; }
+.icon-amber { background:#fff2d9; }
+
+.card-title {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card-desc {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid #edf1ee;
+  color: var(--green-light);
+  font-size: 11px;
+}
+
+.card-foot b {
+  font-size: 16px;
+}
+
+.help {
+  display: flex;
+  gap: 13px;
+  background: #e4eee8;
+  padding: 18px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.help-icon {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.help strong {
+  font-size: 13px;
+}
+
+.help p {
+  color: #65786e;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 6px 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 38px 15px;
+  color: #82918a;
+}
+
+footer strong {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+footer span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+@media(max-width:600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 25px;
+  }
+
+  .hero-copy {
+    margin-top: 38px;
+  }
+
+  .welcome {
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="topline">
+    <div class="brand">
+      <div class="brand-mark">CIT</div>
+      <div>
+        <div class="brand-name">CREATIVE INNOVATION</div>
+        <div class="brand-sub">TECHNOLOGY CO., LTD.</div>
+      </div>
+    </div>
+    <span class="status"><i></i> TECHNICIAN</span>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">TECHNICIAN SERVICE PORTAL</p>
+    <h1>🔧 CIT Technician</h1>
+    <p>ระบบเอกสารและงานบริการสำหรับช่าง</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="welcome">
+    <div>
+      <span class="section-kicker">QUICK ACCESS</span>
+      <h2>เมนูสำหรับช่าง</h2>
+      <p>เลือกบริการที่ต้องการใช้งาน</p>
+    </div>
+  </section>
+
+  <section class="cards">
+
+    <a class="card"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSds7ZZmtMvBXN-AFuH0RIVGrhw3p2vGXr4zHj_ggMARlRWL5A/viewform?usp=sharing"
+      target="_blank" rel="noopener">
+      <span class="icon icon-green">🛠️</span>
+      <span class="card-title">เอกสารทำ PM</span>
+      <span class="card-desc">Preventive Maintenance</span>
+      <span class="card-foot">เปิดแบบฟอร์ม <b>↗</b></span>
+    </a>
+
+    <a class="card"
+      href="https://drive.google.com/drive/folders/1Iu1eX9kAYmLXPEU52ql0tqyxAZVcmRX7?usp=drive_link"
+      target="_blank" rel="noopener">
+      <span class="icon icon-blue">📄</span>
+      <span class="card-title">PDF PM</span>
+      <span class="card-desc">คู่มือและเอกสาร PM</span>
+      <span class="card-foot">เปิด Google Drive <b>↗</b></span>
+    </a>
+
+    <a class="card"
+      href="https://cit-service-calendar.netlify.app/"
+      target="_blank" rel="noopener">
+      <span class="icon icon-amber">📅</span>
+      <span class="card-title">ปฏิทินงานบริการ CIT</span>
+      <span class="card-desc">CIT Service Calendar</span>
+      <span class="card-foot">เปิดระบบปฏิทิน <b>↗</b></span>
+    </a>
+
+  </section>
+
+  <section class="help">
+    <div class="help-icon">i</div>
+    <div>
+      <strong>ใช้งานบนโทรศัพท์</strong>
+      <p>เปิดเว็บไซต์ผ่าน Chrome หรือ Safari แล้วเลือกเพิ่มไปยังหน้าจอหลัก เพื่อสร้างไอคอนเข้าใช้งานเหมือนแอป</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>CREATIVE INNOVATION TECHNOLOGY CO., LTD.</strong>
+  <span>CIT TECHNICIAN PORTAL</span>
+</footer>
+
+</body>
+</html>
+
